@@ -41,24 +41,9 @@
     
 // })
 
-const geocode = (address, callback) => {
 
-    const url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + encodeURIComponent(address) + '.json?access_token=pk.eyJ1IjoieWFzaXJ0aGVkdXJyYW5pIiwiYSI6ImNqdnhoMXA5azA1MmY0YW1qaDRjZjluMnIifQ.JC-I3GJHfksjPee6Q_19IA&limit=1'
 
-    request({url: url, json: true} , (error, response) => {
-       
-        if(error) {
-            callback('Unable to connect to location services' , undefined)
-        }else if(response.body.features.length === 0){
-            callback('Unable to connect to location. Try aother search' , undefined)
-        }else{
-            
-        }
-
-    })
-}
-
-geocode( '12what', (error, data) => {
+geocode( 'Toronto', (error, data) => {
 
     console.log('Error' , error)
     console.log('Data' , data)
