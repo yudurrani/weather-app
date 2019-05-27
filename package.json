@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/yudurrani/weather-app#readme",
   "dependencies": {
+    "fahrenheit-to-celsius": "^1.0.0",
     "request": "^2.88.0"
   }
 }
