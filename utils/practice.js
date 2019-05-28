@@ -20,41 +20,61 @@
 //         )}
 
 
-        // object property shorthand
+        // // object property shorthand
 
 
-        const name ="yasir"
-        const userAge = 32
+        // const name ="yasir"
+        // const userAge = 32
 
-        const user = {
-            name,
-            age : userAge,
-            location : 'Toronto'
-        }
+        // const user = {
+        //     name,
+        //     age : userAge,
+        //     location : 'Toronto'
+        // }
 
-        console.log(user)
+        // console.log(user)
 
 
-        // object destructing
+        // // object destructing
 
-        const product = {
-            label :' red notebook',
-            price : 3,
-            stock: 201,
-            salePrice : undefined,
-            rating :4.2
-        }
+        // const product = {
+        //     label :' red notebook',
+        //     price : 3,
+        //     stock: 201,
+        //     salePrice : undefined,
+        //     rating :4.2
+        // }
 
-        // const label = product.label
-        // const stock = product.stock
+        // // const label = product.label
+        // // const stock = product.stock
 
-        // const {label:productLabel, stock, rating = 5} = product
-        // console.log(productLabel)
-        // console.log(stock)
-        // console.log(rating) 
+        // // const {label:productLabel, stock, rating = 5} = product
+        // // console.log(productLabel)
+        // // console.log(stock)
+        // // console.log(rating) 
 
-        const transaction = (type, {label}) => {
-            
-        }
+        // const transaction = (type, {label, stock}) => {
+        //     console.log(type, label, stock)
+        // }
 
-        transaction('order', product)
+        // transaction('order', product)
+
+
+        // raw https.js
+
+        const https = require('https')
+        const url = 'https://api.darksky.net/forecast/8f749f307f69ae04f74c491ce934b590/43,-79'
+
+        https.request( url, (response) => {
+
+            response.on('data', (chunk) => {
+
+                console.log(chunk)
+
+            })
+
+            response.on('end', () =>{
+
+            })
+
+        })
