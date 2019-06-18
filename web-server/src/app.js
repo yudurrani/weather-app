@@ -42,14 +42,33 @@ app.get('/help', (req, res) => {
 })
 
 app.get('/weather', (req, res) => {
-    res.send([{
-        Location:'Toronto',
-    },{
-        Forcast: '19 degrees',
+    if(!req.query.address){
+        return res.send({
+        error:'Address must be provided',
+    })
+    }
 
-    }])
+    console.log(req.query.address)
+    res.send({
+        forcast: 'it is sunny',
+        location: 'Oakville',
+        address: req.query.address,
+    })
+
 })
 
+app.get('/products', (req, res) => {
+    if(!req.query.search){
+        return res.send({
+        error:'The search item is not provided',
+    })
+    }
+
+    console.log(req.query.search)
+    res.send({
+        products: []
+    })
+})
 
 app.get( '/help/*', (req, res) => {
     res.render( '404',{
