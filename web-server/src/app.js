@@ -27,7 +27,7 @@ app.get('', (req, res) => {
 
 app.get('/about', (req, res) => {
     res.render('about', {
-        title:'about the app',
+        title:'About',
         name:'this one is by me'
         
     })
