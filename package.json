@@ -2,7 +2,7 @@
   "name": "weather-app",
   "version": "1.0.0",
   "description": "\"# weather-app\"",
-  "main": "app.js",
+  "main": "web-server/src/app.js",
   "scripts": {
     "start": "node web-server/src/app.js"
   },
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/yudurrani/weather-app.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Yasir Durrani",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/yudurrani/weather-app/issues"
